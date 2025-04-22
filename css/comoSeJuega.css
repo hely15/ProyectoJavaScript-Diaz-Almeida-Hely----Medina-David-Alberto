@@ -1,0 +1,176 @@
+@import url(variables.css);
+
+p {
+    font-family: "Quintessential-Regular";
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-image: url('/storage/img/backgroundComoSeJuega.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.containerheader {
+    width: 50vw;
+    height: 20svh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    div {
+        width: 50svw;
+        height: 13svh;
+
+        img {
+            width: 50vw;
+            height: 100%;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .containerheader {
+        div {
+            img {
+                width: 70vw;
+                height: 10vh;
+            }           
+        }
+    }
+}
+    
+
+.containerComoSeJuega {
+    width: 91svw;
+    height: 90svh;
+    position: absolute;
+    top: 18svh;
+    left: 8svw;
+
+    .pergamino {
+        position: absolute;
+        z-index: 1;
+        width: 20svw;
+        height: 20svh;
+    }
+
+    .dragonText {
+        position: absolute;
+        z-index: 1;
+        width: 20svw;
+        height: 40svh;
+        top: 6svh;
+        left: 72svw;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerComoSeJuega {
+        .pergamino {
+            width: 30vw;
+            height: 10vh;
+            top: 6vh;
+        }
+
+        .dragonText {
+            width: 35vw;
+            height: 40vh;
+            top: 6svh;
+            left: 72svw;
+        }
+    }
+
+
+    .dragonText {
+        position: absolute;
+        z-index: 1;
+        width: 20svw;
+        height: 40svh;
+        top: 6svh;
+        left: 72svw;
+    }
+}
+
+.containerSection {
+    position: relative;
+    top: 10svh;
+    width: 85svw;
+    height: 70svh;
+
+    img {
+        width: 100%;
+        height: 100%;   
+    }
+    .fondoPiedra {
+        position: absolute;
+    }
+
+}
+
+.containerTextoComoSJ {
+    width: 90%;
+    height: 92%;
+    overflow: auto;
+    position: absolute;
+    top: 1vw;
+    left: 4svh;
+    padding: 1vh;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.button-container {
+    position: absolute;
+    width: 200px;
+    height: 125px;
+    top: 70svh;
+    z-index: 2;
+    left: 73svw;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        top: 70svh;
+        left: 44svw;
+    }
+}
+
+.inicio-button {
+    width: 100%;
+    height: 100%;
+    background-image: url('/storage/img/button-frame.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.inicio-button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    color: white;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 18px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+}
