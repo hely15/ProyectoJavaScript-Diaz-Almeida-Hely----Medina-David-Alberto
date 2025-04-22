@@ -1,0 +1,168 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'MedievalSharp', cursive;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Fondo */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/storage/img/background.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Decoraciones de esquina */
+.corner {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+    background-image: url('/storage/img/corner-top-left.png');
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    background-image: url('/storage/img/corner-top-right.png');
+    transform: scaleX(-1);
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    background-image: url('/storage/img/corner-bottom-left.png');
+    transform: scaleY(-1);
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    background-image: url('/storage/img/corner-top-left.png');
+    transform: scale(-1);
+}
+
+/* Contenido principal */
+.contentLogoButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo {
+    margin-bottom: 50px;
+    filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.5));
+}
+
+.logo img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+/* Botón de inicio */
+.button-container {
+    position: relative;
+    width: 200px;
+    height: 100px;
+}
+
+.inicio-button {
+    width: 100%;
+    height: 100%;
+    background-image: url('/storage/img/button-frame.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.inicio-button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 28px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.inicio-button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .corner {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .logo img {
+        max-width: 400px;
+    }
+    
+    .button-container {
+        width: 180px;
+        height: 70px;
+    }
+    
+    .inicio-button span {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .corner {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .logo img {
+        max-width: 300px;
+    }
+    
+    .button-container {
+        width: 150px;
+        height: 60px;
+    }
+    
+    .inicio-button span {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,130 @@
+@import url(variables.css);
+
+p {
+    font-family: "Quintessential-Regular";
+    color: white;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180%;
+    background-image: url('/storage/img/fondoCreaTuPersonaje.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.containerheader {
+    width: 50vw;
+    height: 20svh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    div {
+        width: 50svw;
+        height: 13svh;
+
+        img {
+            width: 50vw;
+            height: 100%;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .containerheader {
+        div {
+            img {
+                width: 70vw;
+                height: 10vh;
+            }           
+        }
+    }
+}
+
+
+.containerCrearPersonaje {
+    width: 90vw;
+    height: 55vh;
+    position: absolute;
+    top: 20vh;
+    left: 5vw;
+    margin-top: 2vh;
+}
+
+.containerOpcionesPersonaje {
+    width: 85vw;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    left: 4vh;
+    position: relative;
+
+}
+
+.divInfoRed {
+    background-color: #A00000;
+    width: 18vw;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+}
+.divInfo {
+    background-color: #000000;
+    width: 18vw;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    P{
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+.contenedorOpciones {
+    width: 100%;
+    height: 100%;
+}
+.nombreContenedor {
+    width: 100%;
+    height: 100%;
+}
+
+.contenedorCrearPersonaje {
+    width: 86vw;
+    height: 50vh;
+    position: absolute;
+    top: 7vh;
+    left: 2vh;
+}
+
+.imgBarraRED {
+    width: 50vw;
+    height: 3.7vh;
+    position: relative;
+    left: 10vh;
+}
+
+.nombrePersonaje {
+    width: 87vw;
+    height: 10vh;
+    left: 1.5vh;
+    position: relative;
+    top: 5vw;
+
+    p {
+        position: relative;
+    }
+}
+
