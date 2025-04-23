@@ -4,6 +4,15 @@ p {
     font-family: "Quintessential-Regular";
     color: white;
 }
+label {
+    font-family: "Quintessential-Regular";
+    color: white;
+    
+}
+span {
+    font-family: "Quintessential-Regular";
+    color: white;
+}
 
 .background {
     position: absolute;
@@ -143,4 +152,59 @@ p {
 
 button {
 z-index: 5;
+}
+
+.contenedorEstadisticas {
+    width: 100%;
+    height: 110%;
+}
+
+
+.contenedorSliders {
+    width: 95%;
+    height: 80%;
+    position: relative;
+    top: -55vh;
+    left: 2.4vh;
+}
+
+
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #000; /* barra de fondo negra */
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+  
+  /* Estilo del "thumb" (círculo que se arrastra) en WebKit (Chrome, Safari) */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #000;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+  /* Estilo del "thumb" para Firefox */
+  input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #000;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.valorMostrado {
+    position: relative;
+    top: -4.6vh;
+    left: 15vh;
 }
