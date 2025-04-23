@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/creaTuPersonaje.css">
     <script type="module" src="main.js"></script>
+    <script type="module" src="estadisticas.js"></script>
     <title>creaTuPersonaje</title>
 </head>
 <body>
@@ -33,12 +34,40 @@
             </div>
         </section>
         <section class="contenedorEstadisticas">
-            <div class="selectorFuerza">
-                <label for="valorSlider">Fuerza</label>
-                <input type="range" id="valorSlider" min="3" max="18" value="10">
-                <span id="valorSeleccionado">10</span>
-            </div>
-
+            <div id="contenedorSliders">
+                <div class="sliderBox">
+                  <label>Fuerza:</label>
+                  <input type="range" min="3" max="18" value="10" class="slider">
+                  <span class="valorMostrado">10</span>
+                </div>
+                <div class="sliderBox">
+                  <label>Destreza:</label>
+                  <input type="range" min="3" max="18" value="10" class="slider">
+                  <span class="valorMostrado">10</span>
+                </div>
+                <div class="sliderBox">
+                  <label>Constitución:</label>
+                  <input type="range" min="3" max="18" value="10" class="slider">
+                  <span class="valorMostrado">10</span>
+                </div>
+                <div class="sliderBox">
+                  <label>Inteligencia:</label>
+                  <input type="range" min="3" max="18" value="10" class="slider">
+                  <span class="valorMostrado">10</span>
+                </div>
+                <div class="sliderBox">
+                  <label>Sabiduría:</label>
+                  <input type="range" min="3" max="18" value="10" class="slider">
+                  <span class="valorMostrado">10</span>
+                </div>
+                <div class="sliderBox">
+                  <label>Carisma:</label>
+                  <input type="range" min="3" max="18" value="10" class="slider">
+                  <span class="valorMostrado">10</span>
+                </div>
+              </div>
+              
+              <button id="guardarTodos">Guardar todos</button>
         </section>
     </article>
 </body>

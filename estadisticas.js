@@ -1,10 +1,16 @@
-const slider = document.getElementById("valorSlider");
-const spanValor = document.getElementById("valorSeleccionado");
-const botonGuardar = document.getElementById("guardarValor");
+const sliders = document.querySelectorAll(".slider");
+const valores = document.querySelectorAll(".valorMostrado");
+const botonGuardar = document.getElementById("guardarTodos");
 
-let valorGuardado = null;
+let valoresGuardados = [];
 
-// Actualiza el número mostrado en tiempo real
-slider.addEventListener("input", () => {
-  spanValor.textContent = slider.value;
+sliders.forEach((slider, i) => {
+  slider.addEventListener("input", () => {
+    valores[i].textContent = slider.value;
+  });
+});
+
+botonGuardar.addEventListener("click", () => {
+  valoresGuardados = Array.from(sliders).map(slider => Number(slider.value));
+  console.log("Valores guardados:", valoresGuardados);
 });
