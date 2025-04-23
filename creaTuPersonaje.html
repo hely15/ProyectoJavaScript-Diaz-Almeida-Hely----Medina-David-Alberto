@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/creaTuPersonaje.css">
+    <script type="module" src="main.js"></script>
     <title>creaTuPersonaje</title>
 </head>
 <body>
@@ -14,33 +15,30 @@
         </div>
     </header>
     <article class="containerCrearPersonaje">
-        <section class="containerOpcionesPersonaje">
-            <div class="divInfoRed">
-                <p>Info</p>
+        <section id="containerOpcionesPersonaje" class="containerOpcionesPersonaje">
+            <div class="divInfoRed" type="button" id="buttonInfo">
+            <p>Info</p>
             </div>
-            <div class="divInfo">
-                <p>Estadisticas</p>
+            <div class="divInfo" type="button" id="buttonEstadisticas">
+            <p>Estadisticas</p>
             </div>
-            <div class="divInfo">
-                <p>Equipo</p>
+            <div class="divInfo" type="button" id="buttonEquipo">
+            <p>Equipo</p>
             </div>
-            <div class="divInfo">
-                <p>Habilidades</p>
+            <div class="divInfo" type="button" id="buttonHabilidades">
+            <p>Habilidades</p>
             </div>
-            <div class="divInfo">
-                <p>Aparencia</p>
+            <div class="divInfo" type="button" id="buttonApariencia">
+            <p>Apariencia</p>
             </div>
         </section>
-        <section class="contenedorOpciones">
-            <img src="storage/img/fondoCreaTuPerPierdra.png" alt="" style="width: 100%; height: 100%;">
-                <div class="contenedorCrearPersonaje">
-                    <div class="nombrePersonaje">
-                        <img class="imgBarraRED" src="storage/img/barraNombre.png" alt="" >
-                        <p>Nombre De Tu Personaje </p>
-                    </div>
-                    <input type="text" placeholder="">
-                </div>
+        <section class="contenedorEstadisticas">
+            <div class="selectorFuerza">
+                <label for="valorSlider">Fuerza</label>
+                <input type="range" id="valorSlider" min="3" max="18" value="10">
+                <span id="valorSeleccionado">10</span>
             </div>
+
         </section>
     </article>
 </body>
