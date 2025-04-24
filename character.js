@@ -62,10 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Functions
     function populateCharacterData(character) {
       // Determine emoji based on race
-      let emoji = "🧙"
-      if (character.race === "Elf") emoji = "🧝"
-      else if (character.race === "Dwarf") emoji = "🧔"
-      else if (character.race === "Halfling") emoji = "🧒"
   
       // Page title and header
       document.title = `${character.name || "Character"} - D&D Character Generator`

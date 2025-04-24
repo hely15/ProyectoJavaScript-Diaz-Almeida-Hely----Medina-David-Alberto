@@ -7,6 +7,7 @@
 
     <script type="module" src="estadisticas.js"></script>
     <script type="module" src="crearPersonaje.js"></script>
+    <script type="module" src="tabs.js"></script>
     <title>creaTuPersonaje</title>
 </head>
 <body>
@@ -34,33 +35,39 @@
             <p>Apariencia</p>
             </div>
         </section>
-        <div class="card">
+        <section class="contenedorCrearPersonaje">
+            <img src="storage/img/fondoCreaTuPerPierdra.png" alt="" style="width: 100%; height: 100%;">
+            <div class="card">
             <!-- Basic Info Tab -->
-            <div class="tab-content active" id="basic-tab">
-              <div class="form-group">
-                <label for="name">Character Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter character name">
+            <div class="tab-content active contInfo" id="basic-tab">
+              <div class="form-group estiloInfo">
+                <img class="imgFondoRED" src="storage/img/barraNombre.png" alt="">
+                <label class="nombreIntRED" for="name">Character Name</label>
+                <input class="estiloInput" type="text" id="name" name="name" placeholder="Enter character name">
               </div>
   
-              <div class="form-group">
-                <label for="race">Race</label>
-                <select id="race" name="race">
+              <div class="form-group estiloInfo">
+                <img class="imgFondoRED" src="storage/img/barraNombre.png" alt="">
+                <label class="nombreIntRED" for="race">Race</label>
+                <select class="estiloInput" id="race" name="race">
                   <option value="">Select a race</option>
                   <!-- Races will be populated by JavaScript -->
                 </select>
               </div>
   
-              <div class="form-group">
-                <label for="class">Class</label>
-                <select id="class" name="class">
+              <div class="form-group estiloInfo">
+                <img class="imgFondoRED" src="storage/img/barraNombre.png" alt="">
+                <label class="nombreIntRED" for="class">Class</label>
+                <select class="estiloInput" id="class" name="class">
                   <option value="">Select a class</option>
                   <!-- Classes will be populated by JavaScript -->
                 </select>
               </div>
   
-              <div class="form-group">
-                <label for="gender">Gender</label>
-                <select id="gender" name="gender">
+              <div class="form-group estiloInfo">
+                <img class="imgFondoRED" src="storage/img/barraNombre.png" alt="">
+                <label class="nombreIntRED" for="gender">Gender</label>
+                <select class="estiloInput" id="gender" name="gender">
                   <option value="">Select gender</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
@@ -78,10 +85,6 @@
                     <span id="strength-value">10</span>
                   </div>
                   <input type="range" id="strength" name="strength" min="3" max="18" value="10" class="stat-slider">
-                  <div class="stat-range">
-                    <span>3</span>
-                    <span>18</span>
-                  </div>
                 </div>
   
                 <div class="stat-group">
@@ -90,10 +93,6 @@
                     <span id="dexterity-value">10</span>
                   </div>
                   <input type="range" id="dexterity" name="dexterity" min="3" max="18" value="10" class="stat-slider">
-                  <div class="stat-range">
-                    <span>3</span>
-                    <span>18</span>
-                  </div>
                 </div>
   
                 <div class="stat-group">
@@ -102,10 +101,6 @@
                     <span id="constitution-value">10</span>
                   </div>
                   <input type="range" id="constitution" name="constitution" min="3" max="18" value="10" class="stat-slider">
-                  <div class="stat-range">
-                    <span>3</span>
-                    <span>18</span>
-                  </div>
                 </div>
   
                 <div class="stat-group">
@@ -114,10 +109,6 @@
                     <span id="intelligence-value">10</span>
                   </div>
                   <input type="range" id="intelligence" name="intelligence" min="3" max="18" value="10" class="stat-slider">
-                  <div class="stat-range">
-                    <span>3</span>
-                    <span>18</span>
-                  </div>
                 </div>
   
                 <div class="stat-group">
@@ -126,10 +117,6 @@
                     <span id="wisdom-value">10</span>
                   </div>
                   <input type="range" id="wisdom" name="wisdom" min="3" max="18" value="10" class="stat-slider">
-                  <div class="stat-range">
-                    <span>3</span>
-                    <span>18</span>
-                  </div>
                 </div>
   
                 <div class="stat-group">
@@ -138,35 +125,34 @@
                     <span id="charisma-value">10</span>
                   </div>
                   <input type="range" id="charisma" name="charisma" min="3" max="18" value="10" class="stat-slider">
-                  <div class="stat-range">
-                    <span>3</span>
-                    <span>18</span>
-                  </div>
                 </div>
               </div>
             </div>
   
             <!-- Equipment Tab -->
             <div class="tab-content" id="equipment-tab">
-              <div class="form-group">
-                <label for="weapon">Weapon</label>
-                <select id="weapon" name="weapon">
+              <div class="form-group estiloInfo">
+                <img class="imgFondoRED" src="storage/img/barraNombre.png" alt="">
+                <label class="nombreIntRED"  for="weapon">Weapon</label>
+                <select class="estiloInput" id="weapon" name="weapon">
                   <option value="">Select a weapon</option>
                   <!-- Weapons will be populated by JavaScript -->
                 </select>
               </div>
   
-              <div class="form-group">
-                <label for="armor">Armor</label>
-                <select id="armor" name="armor">
+              <div class="form-group estiloInfo">
+                <img class="imgFondoRED" src="storage/img/barraNombre.png" alt="">
+                <label class="nombreIntRED" for="armor">Armor</label>
+                <select class="estiloInput" id="armor" name="armor">
                   <option value="">Select armor</option>
                   <!-- Armor will be populated by JavaScript -->
                 </select>
               </div>
   
-              <div class="form-group">
-                <label for="accessory">Accessory</label>
-                <select id="accessory" name="accessory">
+              <div class="form-group estiloInfo">
+                <img class="imgFondoRED" src="storage/img/barraNombre.png" alt="">
+                <label class="nombreIntRED" for="accessory">Accessory</label>
+                <select class="estiloInput" id="accessory" name="accessory">
                   <option value="">Select an accessory</option>
                   <!-- Accessories will be populated by JavaScript -->
                 </select>
@@ -175,7 +161,7 @@
   
             <!-- Abilities Tab -->
             <div class="tab-content" id="abilities-tab">
-              <p class="abilities-intro">Select special abilities for your character:</p>
+
               <div class="abilities-list" id="abilities-list">
                 <!-- Abilities will be populated by JavaScript -->
               </div>
@@ -184,42 +170,34 @@
             <!-- Appearance Tab -->
             <div class="tab-content" id="appearance-tab">
               <div class="appearance-grid">
-                <div class="form-group">
-                  <label for="hairColor">Hair Color</label>
-                  <input type="text" id="hairColor" name="hairColor" placeholder="Hair color">
+                <div class="form-group estiloInfo">
+                    <img class="imgFondoRED" src="storage/img/barraNombre.png" alt="">
+                  <label class="nombreIntRED" for="hairColor">Hair Color</label>
+                  <input class="estiloInput" type="text" id="hairColor" name="hairColor" placeholder="Hair color">
                 </div>
   
-                <div class="form-group">
-                  <label for="eyeColor">Eye Color</label>
-                  <input type="text" id="eyeColor" name="eyeColor" placeholder="Eye color">
+                <div class="form-group estiloInfo">
+                    <img class="imgFondoRED" src="storage/img/barraNombre.png" alt="">
+                  <label class="nombreIntRED" for="eyeColor">Eye Color</label>
+                  <input class="estiloInput" type="text" id="eyeColor" name="eyeColor" placeholder="Eye color">
                 </div>
   
-                <div class="form-group">
-                  <label for="height">Height</label>
-                  <input type="text" id="height" name="height" placeholder="Height (e.g., 6'2\")">
+                <div class="form-group estiloInfo">
+                    <img class="imgFondoRED" src="storage/img/barraNombre.png" alt="">
+                  <label class="nombreIntRED" for="height">Height</label>
+                  <input class="estiloInput" type="text" id="height" name="height" placeholder="Height (e.g., 6'2\")>
                 </div>
   
-                <div class="form-group">
-                  <label for="weight">Weight</label>
-                  <input type="text" id="weight" name="weight" placeholder="Weight (e.g., 180 lbs)">
+                <div class="form-group estiloInfo">
+                    <img class="imgFondoRED" src="storage/img/barraNombre.png" alt="">
+                  <label class="nombreIntRED" for="weight">Weight</label>
+                  <input class="estiloInput" type="text" id="weight" name="weight" placeholder="Weight (e.g., 180 lbs)">
                 </div>
-              </div>
-  
-              <div class="character-preview">
-                <h3>Character Preview</h3>
-                <div class="preview-card">
-                  <div class="preview-avatar">
-                    <span class="avatar-emoji">🧙</span>
-                  </div>
-                  <div class="preview-info">
-                    <h3 id="preview-name">Unnamed Character</h3>
-                    <p id="preview-race-class"></p>
-                    <p id="preview-physical" class="preview-physical"></p>
-                  </div>
-                </div>
+
               </div>
             </div>
-          </div>
+            </div>
+        </section>
     </article>
 </body>
 </html>
