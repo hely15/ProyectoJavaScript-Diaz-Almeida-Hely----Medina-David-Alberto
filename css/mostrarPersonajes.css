@@ -66,7 +66,7 @@ h3 {
 
 .containerSection img {
     width: 100%;
-    height: 100%;   
+    height: 80%;   
 }
 
 .containerSection .fondoPiedra {
@@ -330,11 +330,11 @@ h3 {
     }
     
     .character-list {
-        gap: 12vw;
+        gap: 2vw;
     }
     
     .char-card {
-        width: 22vw;
+        width: 19vw;
     }
     
     .stats-grid {
@@ -426,9 +426,9 @@ h3 {
     }
     
     .containerTuPersonaje .pergamino {
-        width: 40vw;
-        height: 8vh;
-        left: 30vw;
+        width: 37vw;
+        height: 11vh;
+        left: 25vw;
     }
     
     .containerSection {
@@ -452,8 +452,10 @@ h3 {
     }
     
     .char-card {
-        width: 40vw;
+        width: 36vw;
         min-height: 20vh;
+        position: relative;
+        top: -9vh;
     }
     
     .char-card h3 {
@@ -551,4 +553,21 @@ h3 {
     .character-modal {
         max-height: 85vh;
     }
+}
+
+.bottonVerPersonajes {
+    position: absolute;
+    top: 53vh;
+}
+.buttonRed {
+    background-color: #A00000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: "Quintessential-Regular", serif;
+    cursor: pointer;
+    display: block;
+    margin-top: 63vh;
+    margin-left: 20vh;
 }

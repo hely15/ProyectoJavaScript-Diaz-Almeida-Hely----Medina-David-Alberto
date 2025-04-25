@@ -56,7 +56,10 @@ span {
             }
         }
     }
+
+
 }
+
 
 
 .containerCrearPersonaje {
@@ -224,7 +227,7 @@ input[type="range"]::-moz-range-thumb {
 .tab-content.active {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
 
 .tab-btn.active {
@@ -267,7 +270,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .imgFondoRED {
-    width: 30vw;
+    width: 40vw;
     height: 4vh;
 }
 
@@ -291,8 +294,18 @@ input[type="range"]::-moz-range-thumb {
     padding-left: 20%;
 }
 
+@media (max-width: 390px) {
+
+    .stats-container {
+        width: 48vh;
+        height: 100%;
+        padding-left: 4%;
+    }
+}
+
+
 .stat-group {
-    padding-bottom: 2vh;
+    padding-bottom: 0vh;
 }
 
 
@@ -374,4 +387,104 @@ input:checked+.ability-slider {
 
 input:checked+.ability-slider:before {
     transform: translateX(16px);
+}
+
+.bottonVerPersonajes {
+    position: absolute;
+    top: 53vh;
+}
+.buttonRed {
+    background-color: #A00000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: "Quintessential-Regular", serif;
+    cursor: pointer;
+    display: block;
+    margin-top: -1vh;
+}
+
+
+/* Reemplazo de la clase stats-container existente con una versión responsiva */
+.stats-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2vh 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Mejoras para los elementos de estadísticas */
+.stat-group {
+    margin-bottom: 2vh;
+    width: 100%;
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5vh;
+}
+
+.stat-slider {
+    width: 100%;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (min-width: 1200px) {
+    .stats-container {
+        max-width: 700px;
+        padding: 3vh 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        padding: 2vh 8%;
+    }
+    
+    .stat-group {
+        margin-bottom: 1.5vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-container {
+        padding: 1.5vh 5%;
+    }
+    
+    .stat-group {
+        margin-bottom: 1vh;
+    }
+    
+    .stat-header label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .stats-container {
+        padding: 1vh 2%;
+    }
+}
+
+/* Orientación landscape para dispositivos móviles */
+@media (orientation: landscape) and (max-height: 500px) {
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2vh 5%;
+        height: auto;
+        overflow-y: auto;
+        max-height: 40vh;
+    }
+    
+    .stat-group {
+        margin-bottom: 0.5vh;
+    }
 }
