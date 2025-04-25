@@ -1,0 +1,554 @@
+@import url(variables.css);
+
+p {
+    font-family: "Quintessential-Regular";
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+}
+
+h3 {
+    font-size: 4vh;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('/storage/img/backgroundComoSeJuega.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.containerheader {
+    width: 50vw;
+    height: 20svh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.containerheader div {
+    width: 50svw;
+    height: 13svh;
+}
+
+.containerheader div img {
+    width: 50vw;
+    height: 100%;
+}
+
+.containerTuPersonaje {
+    width: 85vw;
+    height: 120vh;
+    position: absolute;
+    top: 18svh;
+    left: 8svw;
+}
+
+.containerTuPersonaje .pergamino {
+    position: absolute;
+    z-index: 1;
+    width: 20svw;
+    height: 20svh;
+    left: 70vh;
+}
+
+.containerSection {
+    position: relative;
+    top: 10svh;
+    width: 85svw;
+    height: 110svh;
+}
+
+.containerSection img {
+    width: 100%;
+    height: 100%;   
+}
+
+.containerSection .fondoPiedra {
+    position: absolute;
+}
+
+.containerTextoComoSJ {
+    width: 90%;
+    height: 92%;
+    overflow: auto;
+    position: absolute;
+    top: 1vw;
+    left: 4svh;
+    padding: 1vh;
+}
+
+.containerTextoComoSJ img {
+    width: 100%;
+    height: 100%;
+}
+
+.containerBanderin {
+    width: 70vw;
+    height: 75vh;
+    position: absolute;
+    top: 45svh;
+    left: 15svw;
+    display: flex;
+    overflow: scroll;
+}
+
+.banderin {
+    width: 23vw;
+    height: 52vh;
+}
+
+.characters-container {
+    height: 46vh;
+    overflow-y: auto;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+  
+.character-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.character-card h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.stats, .equipment, .abilities, .appearance {
+    margin-bottom: 0.5rem;
+}
+
+.ability-item {
+    margin-left: 1rem;
+}
+
+.character-list {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: max-content;
+    height: 50vh;
+    left: 1vw;
+    gap: 3vw;
+}
+
+
+.char-card {
+    width: 18vw;
+    min-height: 30vh;
+    text-align: center;
+    padding: 2vh 1vw;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+.char-card:hover {
+    transform: scale(1.05);
+}
+
+.char-card h3 {
+    font-size: 2.5vh;
+    margin-bottom: 1vh;
+}
+
+.char-card p {
+    font-size: 1.8vh;
+    margin: 0.5vh 0;
+}
+
+
+.banderin-wrapper {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.banderin-wrapper:hover {
+    transform: translateY(-10px);
+}
+
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-modal {
+    width: 80%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow: auto;
+    background-image: url('/storage/img/pergaminoGrande.png');
+    background-size: cover;
+    background-position: center;
+    padding: 4vh 4vw;
+    border-radius: 10px;
+    position: relative;
+    color: #333;
+}
+
+.modal-content {
+    position: relative;
+    padding: 1vh 1vw;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #A00000;
+    font-weight: bold;
+}
+
+.modal-section {
+    margin-bottom: 3vh;
+}
+
+.modal-section h3 {
+    font-size: 2.5vh;
+    color: wheat;
+    margin-bottom: 1vh;
+    border-bottom: 1px solid #897048;
+    padding-bottom: 0.5vh;
+}
+
+.modal-content h2 {
+    font-size: 3.5vh;
+    color: #A00000;
+    text-align: center;
+    margin-bottom: 3vh;
+    font-family: "Quintessential-Regular";
+}
+
+.modal-content p {
+    color: white;
+    font-size: 2vh;
+    margin: 0.5vh 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vh;
+}
+
+.stat-item {
+    padding: 1vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.8vh;
+}
+
+.abilities-list {
+    list-style-type: disc;
+    padding-left: 2vw;
+}
+
+.abilities-list li {
+    margin-bottom: 1vh;
+    color: white;
+    font-size: 1.8vh;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 3vh;
+}
+
+.modal-actions button {
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.8vh;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    background-color: #4e7e3e;
+    color: white;
+}
+
+.delete-button {
+    background-color: #9c3728;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #3a5f2e;
+}
+
+.delete-button:hover {
+    background-color: #7b2a1f;
+}
+
+
+@media (min-width: 1200px) {
+    .containerTuPersonaje .pergamino {
+        left: 70vh;
+    }
+}
+
+
+@media (max-width: 1199px) and (min-width: 769px) {
+    .containerTuPersonaje .pergamino {
+        width: 25svw;
+        height: 18svh;
+        left: 55vh;
+    }
+    
+    .containerBanderin {
+        width: 75vw;
+        left: 12svw;
+    }
+    
+    .character-list {
+        gap: 12vw;
+    }
+    
+    .char-card {
+        width: 22vw;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .containerheader div img {
+        width: 70vw;
+        height: 10vh;
+    }
+    
+    .containerTuPersonaje .pergamino {
+        width: 30vw;
+        height: 10vh;
+        top: 6vh;
+        left: 35vw;
+    }
+    
+    .containerBanderin {
+        width: 85vw;
+        height: 70vh;
+        left: 7svw;
+    }
+    
+    .banderin {
+        width: 35vw;
+        height: 40vh;
+    }
+    
+    .character-list {
+        gap: 10vw;
+        left: 5vw;
+    }
+    
+    .char-card {
+        width: 30vw;
+        min-height: 25vh;
+    }
+    
+    .char-card h3 {
+        font-size: 2.2vh;
+    }
+    
+    .char-card p {
+        font-size: 1.6vh;
+    }
+    
+    .character-modal {
+        width: 90%;
+        padding: 3vh 3vw;
+    }
+    
+    .modal-content h2 {
+        font-size: 3vh;
+    }
+    
+    .modal-section h3 {
+        font-size: 2.2vh;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 480px) {
+    p {
+        font-size: 16px;
+    }
+    
+    h3 {
+        font-size: 3vh;
+    }
+    
+    .containerheader {
+        width: 80vw;
+    }
+    
+    .containerheader div img {
+        width: 80vw;
+    }
+    
+    .containerTuPersonaje {
+        width: 90vw;
+        left: 5svw;
+    }
+    
+    .containerTuPersonaje .pergamino {
+        width: 40vw;
+        height: 8vh;
+        left: 30vw;
+    }
+    
+    .containerSection {
+        width: 90svw;
+    }
+    
+    .containerBanderin {
+        width: 90vw;
+        left: 5svw;
+        overflow-x: auto;
+    }
+    
+    .banderin {
+        width: 45vw;
+        height: 35vh;
+    }
+    
+    .character-list {
+        gap: 8vw;
+        left: 2vw;
+    }
+    
+    .char-card {
+        width: 40vw;
+        min-height: 20vh;
+    }
+    
+    .char-card h3 {
+        font-size: 1.8vh;
+    }
+    
+    .char-card p {
+        font-size: 1.4vh;
+    }
+    
+    .character-modal {
+        width: 95%;
+        padding: 2vh 2vw;
+    }
+    
+    .modal-content h2 {
+        font-size: 2.5vh;
+    }
+    
+    .modal-section h3 {
+        font-size: 2vh;
+    }
+    
+    .modal-content p {
+        font-size: 1.6vh;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-actions button {
+        padding: 1vh 3vw;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .containerTuPersonaje .pergamino {
+        width: 50vw;
+        left: 25vw;
+    }
+    
+    .banderin {
+        width: 60vw;
+    }
+    
+    .character-list {
+        gap: 5vw;
+    }
+    
+    .char-card {
+        width: 55vw;
+    }
+    
+    .character-modal {
+        width: 98%;
+        padding: 1.5vh 1.5vw;
+    }
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+    .containerBanderin {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .character-modal {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .containerheader {
+        height: 15svh;
+    }
+    
+    .containerheader div {
+        height: 10svh;
+    }
+    
+    .containerTuPersonaje {
+        top: 15svh;
+    }
+    
+    .containerSection {
+        top: 5svh;
+    }
+    
+    .containerBanderin {
+        top: 40svh;
+    }
+    
+    .character-modal {
+        max-height: 85vh;
+    }
+}
